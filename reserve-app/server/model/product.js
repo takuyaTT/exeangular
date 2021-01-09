@@ -17,4 +17,4 @@ const ProductsScheme = new Schema({
   headingmessage3: String,
 });
 
-module.exports = mongoose.module('product',ProductsScheme);
+module.exports = mongoose.model('product',ProductsScheme);
