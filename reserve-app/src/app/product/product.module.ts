@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { ProductComponent } from './product.component';
+import { ProductService } from './shared/product.service';
 
 const routes: Routes = [
   { path: 'products', component: ProductComponent,
@@ -26,6 +27,12 @@ const routes: Routes = [
     // *ngForなど利用するため
     CommonModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    ProductService
+  ],
+  bootstrap:[
+    
   ]
 })
 export class ProductModule { }
