@@ -24,7 +24,7 @@ ng v
 | @schematics/angular | 11.0.5 (cli-only) |
 | @schematics/update | 0.1100.5 (cli-only) |
 
-### Node.jsバージョン
+### npmバージョン
 ```
 npm -v
 ```
