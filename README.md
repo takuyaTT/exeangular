@@ -9,6 +9,9 @@ Angular ＆ Node.js の組み合わせWebアプリ
 * メモリ：8GB
 
 ### Angular関連バージョン
+```
+ng v
+```
 * Angular CLI: 11.0.5
 * Node: 14.15.3
 * OS: darwin x64
@@ -22,4 +25,7 @@ Angular ＆ Node.js の組み合わせWebアプリ
 | @schematics/update | 0.1100.5 (cli-only) |
 
 ### Node.jsバージョン
+```
+npm -v
+```
 6.14.9
