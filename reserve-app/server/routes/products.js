@@ -1,6 +1,11 @@
 const express = require('express');
 const Product = require('../model/product');
 const router = express.Router();
+const UserCtrl = require('../controllers/user');
+
+router.post('/secret',UserCtrl.authMiddleware, (req,res)=>{
+  return res.json({"sercret": true});
+});
 
 router.get('',(req,res)=>{
   Product.find({},(err,foundProducts)=>{
@@ -8,7 +13,7 @@ router.get('',(req,res)=>{
   })
 });
 
-router.get('/:productId',(req,res)=>{
+router.get('/:productId', UserCtrl.authMiddleware, (req,res)=>{
   const productId = req.params.productId;
   Product.findById(productId,(err,foundProduct)=>{
     if(err){
